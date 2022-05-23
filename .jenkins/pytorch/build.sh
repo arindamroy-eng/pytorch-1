@@ -142,6 +142,9 @@ if [[ "$BUILD_ENVIRONMENT" == *rocm* ]]; then
     export MAX_JOBS=$(($(nproc) - 1))
   fi
 
+  # Set correct path for LLVM on ROCM
+  export USE_LLVM=/opt/rocm/llvm
+  export LLVM_DIR=/opt/rocm/llvm/lib/cmake/llvm
   if [[ -n "$IN_CI" && -z "$PYTORCH_ROCM_ARCH" ]]; then
       # Set ROCM_ARCH to gfx900 and gfx906 for CI builds, if user doesn't override.
       echo "Limiting PYTORCH_ROCM_ARCH to gfx90[06] for CI builds"
