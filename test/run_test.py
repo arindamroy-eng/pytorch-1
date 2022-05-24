@@ -251,7 +251,6 @@ ROCM_BLOCKLIST = [
     "test_determination",
     "test_jit_legacy",
     "test_type_hints",
-    "test_openmp",
 ]
 
 RUN_PARALLEL_BLOCKLIST = [
