@@ -242,7 +242,6 @@ ROCM_BLOCKLIST = [
     "distributed/_shard/test_replicated_tensor",
     "test_determination",
     "test_jit_legacy",
-    "test_openmp",
 ]
 
 RUN_PARALLEL_BLOCKLIST = [
